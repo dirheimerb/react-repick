@@ -18,7 +18,7 @@ export function ColorMenu({ show, onToggle, title }: MenuProps) {
         <button
             type="button"
             data-color={title}
-            className="z-20 md:m-1 md:mx-2 h-8 w-full md:w-1/4 rounded border-none p-1 shadow-md ring-1 ring-gray-200"
+            className="z-20 h-8 w-full rounded border-none p-1 shadow-md ring-1 ring-gray-200 md:m-1 md:mx-2 md:w-1/4"
             onClick={() => handleToggle(!toggleShow)}
             title={title}
             data-status={toggleShow ? 'open' : 'closed'}

@@ -1,5 +1,7 @@
-import { DatePicker as BasicPicker } from './DatePicker';
-import DateButton from './DateButton';
+'use client';
+import React from 'react';
+import { DatePicker as BasicPicker } from './DatePicker.js';
+import DateButton from './DateButton.js';
 
 export interface DatePickerProps {
     selectedDate: Date;
@@ -14,7 +16,6 @@ export default function DatePicker({
     show,
     onShow,
 }: DatePickerProps) {
-    
     return (
         <>
             <DateButton

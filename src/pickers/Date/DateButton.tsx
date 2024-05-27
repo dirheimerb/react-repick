@@ -1,5 +1,7 @@
-import { useRef } from "react";
-import useClickAwayListener from "../../lib/ClickAway";
+'use client';
+import React from 'react';
+import { useRef } from 'react';
+import useClickAwayListener from '../../lib/ClickAway.js';
 
 export interface DateButtonProps {
     show: boolean;
@@ -16,7 +18,7 @@ export default function DateButton({
     const ref = useRef<HTMLButtonElement>(null);
 
     useClickAwayListener(ref, () => {
-      onShow(false);
+        onShow(false);
     });
 
     return (

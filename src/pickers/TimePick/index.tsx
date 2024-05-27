@@ -1,6 +1,7 @@
-// src/components/TimePicker.tsx
-import React, { useState, useRef } from 'react';
-import useClickAwayListener from '../../lib/ClickAway';
+'use client';
+import React from 'react';
+import { useState, useRef } from 'react';
+import useClickAwayListener from '../../lib/ClickAway.js';
 
 interface TimePickerProps {
     value: string;
@@ -11,7 +12,9 @@ const TimePicker: React.FC<TimePickerProps> = ({ value, onChange }) => {
     const [isOpen, setIsOpen] = useState(false);
     const [hours, setHours] = useState(new Date().getHours() % 12 || 12);
     const [minutes, setMinutes] = useState(new Date().getMinutes());
-    const [period, setPeriod] = useState(new Date().getHours() >= 12 ? 'PM' : 'AM');
+    const [period, setPeriod] = useState(
+        new Date().getHours() >= 12 ? 'PM' : 'AM',
+    );
     const ref = useRef<HTMLDivElement>(null);
 
     useClickAwayListener(ref, () => {
@@ -47,7 +50,10 @@ const TimePicker: React.FC<TimePickerProps> = ({ value, onChange }) => {
     };
 
     return (
-        <div className="relative inline-block w-full md:w-1/4 lg:w-1/4 " ref={ref}>
+        <div
+            className="relative inline-block w-full md:w-1/4 lg:w-1/4 "
+            ref={ref}
+        >
             <button
                 type="button"
                 className="w-full cursor-pointer rounded-md border border-gray-300 bg-white py-2 pl-3 pr-10 text-left shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500 sm:text-sm"

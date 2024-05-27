@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import clsx from 'clsx';
-import ColorWheel, { ColorType } from '../../lib/ColorWheel';
-import ColorButton from '../../lib/ColorButton';
-import ColorFormatSelect from '../../lib/ColorFormat';
-import { hexToRgb, rgbToHex, toHex } from '../../lib/colorUtils';
+import ColorWheel, { ColorType } from '../../lib/ColorWheel.js';
+import ColorButton from '../../lib/ColorButton.js';
+import { hexToRgb, toHex } from '../../lib/colorUtils.js';
 
 export interface ColorPickerProps {
     color: string;
@@ -63,12 +62,12 @@ const CustomColorPicker: React.FC<ColorPickerProps> = ({
 
     return (
         show && (
-            <div className="fixed m-2 flex justify-center rounded border bg-white p-2 z-30">
+            <div className="fixed z-30 m-2 flex justify-center rounded border bg-white p-2">
                 {/* <div className="absolute top-0 left-0 w-full h-screen bg-gray-100 opacity-50 z-10" /> */}
                 <div className="bg-white">
                     {/* <ColorFormatSelect selectedFormat={colorFormat} onChange={handleFormatChange} /> */}
 
-                    <div className="relative z-20 mt-2 flex items-center mb-2">
+                    <div className="relative z-20 mb-2 mt-2 flex items-center">
                         <input
                             type="text"
                             name="color"

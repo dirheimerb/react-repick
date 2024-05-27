@@ -1,7 +1,6 @@
 {
     "name": "react-repick",
     "version": "0.0.1",
-    "private": true,
     "description": "A collection of React pickers.",
     "keywords": [
         "react",
@@ -11,7 +10,6 @@
         "time",
         "date",
         "pick",
-        "pickers",
         "pickers",
         "timepickers",
         "datepickers",
@@ -25,18 +23,35 @@
         "react-timepickers",
         "react-datepickers"
     ],
-    "author": "Bradley Dirheimer",
-    "type": "module",
-    "license": "MIT",
+    "homepage": "https://github.com/dirheimerb/react-repick/blob/main/README.md",
+    "bugs": {
+        "url": "https://github.com/dirheimerb/react-repick/issues"
+    },
     "repository": {
         "type": "git",
-        "url": "git+
+        "url": "https://github.com/dirheimerb/react-repick.git"
+    },
+    "license": "MIT",
+    "author": "Bradley Dirheimer",
+    "type": "module",
+    "exports": {
+        ".": {
+            "import": "./src/index.ts",
+            "require": "./dist/index.js"
+        },        
+        "./src/*": "./src/*"
+    },
+    "main": "dist/index.js",
+    "module": "dist/index.es.js",
+    "types": "dist/index.d.ts",
+    "files": [
+        "dist"
+    ],
     "scripts": {
-        "build": "tsc && vite build",
-        "dev": "vite",
+        "build": "esbuild src/index.ts --bundle --format=esm --outfile=dist/index.es.js --sourcemap",
         "format": "prettier --write .",
-        "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-        "preview": "vite preview"
+        "types": "tsc --emitDeclarationOnly",
+        "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0"
     },
     "prettier": {
         "arrowParens": "always",
@@ -53,31 +68,31 @@
     },
     "dependencies": {
         "date-fns": "^3.6.0",
-        "react": "^18.2.0",
-        "react-dom": "^18.2.0",
-        "uuid": "^9.0.1"
+        "react": "^18.3.1",
+        "react-dom": "^18.3.1"
     },
     "devDependencies": {
         "@tailwindcss/forms": "^0.5.7",
         "@tailwindcss/typography": "^0.5.13",
-        "@types/react": "^18.2.66",
-        "@types/react-dom": "^18.2.22",
+        "@types/react": "^18.3.3",
+        "@types/react-dom": "^18.3.0",
         "@types/uuid": "^9.0.8",
-        "@typescript-eslint/eslint-plugin": "^7.2.0",
-        "@typescript-eslint/parser": "^7.2.0",
-        "@vitejs/plugin-react": "^4.2.1",
+        "@typescript-eslint/eslint-plugin": "^7.11.0",
+        "@typescript-eslint/parser": "^7.11.0",
         "autoprefixer": "^10.4.19",
         "clsx": "^2.1.1",
-        "eslint": "^8.57.0",
-        "eslint-plugin-react-hooks": "^4.6.0",
-        "eslint-plugin-react-refresh": "^0.4.6",
+        "esbuild": "^0.21.4",
+        "eslint": "^9.3.0",
+        "eslint-plugin-react-hooks": "^4.6.2",
+        "eslint-plugin-react-refresh": "^0.4.7",
         "postcss": "^8.4.38",
         "prettier": "^3.2.5",
         "prettier-plugin-packagejson": "^2.5.0",
         "prettier-plugin-tailwindcss": "^0.5.14",
         "tailwindcss": "^3.4.3",
-        "typescript": "^5.2.2",
-        "vite": "^5.2.0"
+        "tslib": "^2.6.2",
+        "tsx": "^4.11.0",
+        "typescript": "^5.4.5"
     },
     "packageManager": "pnpm@9.1.2+sha256.19c17528f9ca20bd442e4ca42f00f1b9808a9cb419383cd04ba32ef19322aba7"
 }

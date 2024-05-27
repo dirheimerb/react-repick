@@ -12,7 +12,7 @@ import {
     startOfWeek,
     endOfWeek,
 } from 'date-fns';
-import useClickAwayListener from '../../lib/ClickAway';
+import useClickAwayListener from '../../lib/ClickAway.js';
 
 interface DatePickerProps {
     show: boolean;
@@ -25,13 +25,13 @@ export const DatePicker: React.FC<DatePickerProps> = ({
     show,
     selectedDate,
     onChange,
-    setIsOpen
+    setIsOpen,
 }) => {
     const [currentMonth, setCurrentMonth] = useState(new Date());
     const ref = useRef<HTMLDivElement>(null);
 
     useClickAwayListener(ref, () => {
-      setIsOpen(false);
+        setIsOpen(false);
     });
 
     const handlePreviousMonth = () => {
