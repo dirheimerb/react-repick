@@ -187,15 +187,3 @@ Props:
 ## License
 
 MIT License
-
-### Explanation
-
-This `README.md` file includes:
-
-1. **Introduction**: Briefly describes the library and its components.
-2. **Installation**: Provides commands to install the library.
-3. **Usage**: Example usage of each component (ColorPicker, DatePicker, TimePicker, and DateRangePicker) with the required props.
-4. **Component Props**: Lists the props for each component and their descriptions.
-5. **License**: States the license under which the library is distributed.
-
-By following this structure, users can easily understand how to install, use, and integrate the components into their projects.
