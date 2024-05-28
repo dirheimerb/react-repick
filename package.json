@@ -1,6 +1,6 @@
 {
     "name": "react-repick",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "A collection of React pickers.",
     "keywords": [
         "react",
@@ -33,25 +33,34 @@
     },
     "license": "MIT",
     "author": "Bradley Dirheimer",
-    "type": "module",
+    "sideEffects": [
+        "*.css"
+    ],
     "exports": {
         ".": {
-            "import": "./src/index.ts",
-            "require": "./dist/index.js"
-        },        
-        "./src/*": "./src/*"
+            "import": "./dist/index.esm.js",
+            "types": "./dist/index.d.ts",
+            "require": "./dist/index.esm.js"
+        }
     },
-    "main": "dist/index.js",
-    "module": "dist/index.es.js",
-    "types": "dist/index.d.ts",
+    "main": "./dist/index.esm.js",
+    "module": "./dist/index.esm.js",
+    "types": "./dist/index.d.ts",
     "files": [
-        "dist"
+        "dist/*",
+        "src/*",
+        "CHANGELOG.md",
+        "LICENSE",
+        "README.md"
     ],
+    "type": "module",
     "scripts": {
-        "build": "esbuild src/index.ts --bundle --format=esm --outfile=dist/index.es.js --sourcemap",
+        "build": "rollup -c",
+        "dev": "rollup -c -w",
         "format": "prettier --write .",
-        "types": "tsc --emitDeclarationOnly",
-        "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0"
+        "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+        "types": "tsc --declaration --emitDeclarationOnly",
+        "release": "standard-version"
     },
     "prettier": {
         "arrowParens": "always",
@@ -72,8 +81,23 @@
         "react-dom": "^18.3.1"
     },
     "devDependencies": {
+        "@babel/core": "^7.24.6",
+        "@babel/preset-env": "^7.24.6",
+        "@babel/preset-typescript": "^7.24.6",
+        "@rollup/plugin-alias": "^5.1.0",
+        "@rollup/plugin-babel": "^6.0.4",
+        "@rollup/plugin-commonjs": "^25.0.8",
+        "@rollup/plugin-image": "^3.0.3",
+        "@rollup/plugin-json": "^6.1.0",
+        "@rollup/plugin-node-resolve": "^15.2.3",
+        "@rollup/plugin-replace": "^5.0.5",
+        "@rollup/plugin-swc": "^0.3.0",
+        "@rollup/plugin-terser": "^0.4.4",
+        "@rollup/plugin-url": "^8.0.2",
         "@tailwindcss/forms": "^0.5.7",
         "@tailwindcss/typography": "^0.5.13",
+        "@types/jest": "^29.5.12",
+        "@types/node": "^20.12.12",
         "@types/react": "^18.3.3",
         "@types/react-dom": "^18.3.0",
         "@types/uuid": "^9.0.8",
@@ -81,7 +105,6 @@
         "@typescript-eslint/parser": "^7.11.0",
         "autoprefixer": "^10.4.19",
         "clsx": "^2.1.1",
-        "esbuild": "^0.21.4",
         "eslint": "^9.3.0",
         "eslint-plugin-react-hooks": "^4.6.2",
         "eslint-plugin-react-refresh": "^0.4.7",
@@ -89,10 +112,27 @@
         "prettier": "^3.2.5",
         "prettier-plugin-packagejson": "^2.5.0",
         "prettier-plugin-tailwindcss": "^0.5.14",
+        "rollup": "^4.18.0",
+        "rollup-plugin-peer-deps-external": "^2.2.4",
+        "rollup-plugin-postcss": "^4.0.2",
+        "rollup-plugin-sourcemaps": "^0.6.3",
+        "rollup-plugin-tailwindcss": "^1.0.0",
+        "rollup-plugin-typescript2": "^0.36.0",
+        "standard-version": "^9.5.0",
         "tailwindcss": "^3.4.3",
+        "ts-jest": "^29.1.4",
+        "ts-node": "^10.9.2",
+        "tsconfig-paths": "^4.2.0",
         "tslib": "^2.6.2",
         "tsx": "^4.11.0",
         "typescript": "^5.4.5"
     },
-    "packageManager": "pnpm@9.1.2+sha256.19c17528f9ca20bd442e4ca42f00f1b9808a9cb419383cd04ba32ef19322aba7"
+    "packageManager": "pnpm@9.1.2+sha256.19c17528f9ca20bd442e4ca42f00f1b9808a9cb419383cd04ba32ef19322aba7",
+    "pnpm": {
+        "overrides": {
+            "postcss@>=7.0.0 <7.0.36": ">=7.0.36",
+            "postcss@<7.0.36": ">=7.0.36",
+            "postcss@<8.4.31": ">=8.4.31"
+        }
+    }
 }
