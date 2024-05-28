@@ -1,9 +1,9 @@
-'use client';
+// 'use client';
 import React from 'react';
 import { useState, useRef } from 'react';
-import useClickAwayListener from '../../lib/ClickAway.js';
+import useClickAwayListener from '../../lib/ClickAway';
 
-interface TimePickerProps {
+export interface TimePickerProps {
     value: string;
     onChange: (time: string) => void;
 }

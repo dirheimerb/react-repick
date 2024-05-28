@@ -1,7 +1,7 @@
-'use client';
-import React from 'react';
-import { DatePicker as BasicPicker } from './DatePicker.js';
-import DateButton from './DateButton.js';
+// 'use client';
+// import React from 'react';
+import { BasicDatePicker } from './DatePicker';
+import DateButton from './DateButton';
 
 export interface DatePickerProps {
     selectedDate: Date;
@@ -23,7 +23,7 @@ export default function DatePicker({
                 onShow={onShow}
                 date={selectedDate.toDateString()}
             />
-            <BasicPicker
+            <BasicDatePicker
                 show={show}
                 selectedDate={selectedDate}
                 onChange={onChange}

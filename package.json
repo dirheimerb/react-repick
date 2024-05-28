@@ -60,7 +60,8 @@
         "format": "prettier --write .",
         "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
         "types": "tsc --declaration --emitDeclarationOnly",
-        "release": "standard-version"
+        "release": "standard-version",
+        "publish": "git push --follow-tags origin main && npm publish"
     },
     "prettier": {
         "arrowParens": "always",

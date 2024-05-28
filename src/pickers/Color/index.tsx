@@ -1,7 +1,7 @@
-'use client';
-import React from 'react';
-import CustomColorPicker, { ColorPickerProps } from './ColorPicker.js';
-import { ColorMenu } from './Menu.js';
+// 'use client';
+// import React from 'react';
+import CustomColorPicker, { ColorPickerProps } from './ColorPicker';
+import { ColorMenu } from './Menu';
 
 export interface ColorProps extends ColorPickerProps {
     onShow: (show: boolean) => void;

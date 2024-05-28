@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 
-interface ColorWheelProps {
+export interface ColorWheelProps {
     onSelectColor: (color: string) => void;
     // color: string;
 }

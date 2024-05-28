@@ -12,16 +12,16 @@ import {
     startOfWeek,
     endOfWeek,
 } from 'date-fns';
-import useClickAwayListener from '../../lib/ClickAway.js';
+import useClickAwayListener from '../../lib/ClickAway';
 
-interface DatePickerProps {
+export interface BasicDatePickerProps {
     show: boolean;
     selectedDate: Date;
     onChange: (date: Date) => void;
     setIsOpen: (isOpen: boolean) => void;
 }
 
-export const DatePicker: React.FC<DatePickerProps> = ({
+export const BasicDatePicker: React.FC<BasicDatePickerProps> = ({
     show,
     selectedDate,
     onChange,

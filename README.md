@@ -4,10 +4,10 @@ A collection of reusable picker components including a Color Picker, Date Picker
 
 ## Components
 
--   **[ColorPicker](#colorpicker)**: A custom color picker with predefined colors and a color wheel.
--   **[DatePicker](#datepicker)**: A date picker to select a single date.
--   **[TimePicker](#colorpicker)**: A time picker to select a time with AM/PM format.
--   **[DateRangePicker](#daterangepicker)**: A date range picker to select a start and end date.
+- **[ColorPicker](#colorpicker)**: A custom color picker with predefined colors and a color wheel.
+- **[DatePicker](#datepicker)**: A date picker to select a single date.
+- **[TimePicker](#colorpicker)**: A time picker to select a time with AM/PM format.
+- **[DateRangePicker](#daterangepicker)**: A date range picker to select a start and end date.
 
 ## Installation
 
@@ -148,41 +148,43 @@ const App: React.FC = () => {
 export default App;
 ```
 
+## API
+
 ### ColorPicker Props
 
-Props:
+API:
 
--   `color`: The current selected color.
--   `onColorChange`: Callback function to handle color change.
--   `show`: Boolean to show or hide the color picker.
+- `color`: The current selected color.
+- `onColorChange`: Callback function to handle color change.
+- `show`: Boolean to show or hide the color picker.
 
 ### DatePicker Props
 
-Props:
+API:
 
--   `selectedDate`: The currently selected date.
--   `onChange`: Callback function to handle date change.
--   `show`: Boolean to show or hide the date picker.
--   `setIsOpen`: Callback function to set the visibility of the date picker.
+- `selectedDate`: The currently selected date.
+- `onChange`: Callback function to handle date change.
+- `show`: Boolean to show or hide the date picker.
+- `setIsOpen`: Callback function to set the visibility of the date picker.
 
 ## TimePicker Props
 
-Props:
+API:
 
--   `value`: The currently selected time.
--   `onChange`: Callback function to handle time change.
+- `value`: The currently selected time.
+- `onChange`: Callback function to handle time change.
 
 ## DateRangePicker Props
 
-Props:
+API:
 
--   `startDate`: The currently selected start date.
--   `endDate`: The currently selected end date.
--   `onChange`: Callback function to handle date range change.
--   `show`: Boolean to show or hide the date range picker.
--   `onShow`: Callback function to set the visibility of the date range picker.
--   `selectedStartDate`: The selected start date.
--   `selectedEndDate`: The selected end date.
+- `startDate`: The currently selected start date.
+- `endDate`: The currently selected end date.
+- `onChange`: Callback function to handle date range change.
+- `show`: Boolean to show or hide the date range picker.
+- `onShow`: Callback function to set the visibility of the date range picker.
+- `selectedStartDate`: The selected start date.
+- `selectedEndDate`: The selected end date.
 
 ## License
 

@@ -31,9 +31,9 @@
         // "moduleDetection": "auto",                        /* Control what method is used to detect module-format JS files. */
 
         /* Modules */
-        "module": "NodeNext" /* Specify what module code is generated. */,
+        "module": "ESNext" /* Specify what module code is generated. */,
         // "rootDir": "./",                                  /* Specify the root folder within your source files. */
-        "moduleResolution": "NodeNext" /* Specify how TypeScript looks up a file from a given module specifier. */,
+        "moduleResolution": "Node" /* Specify how TypeScript looks up a file from a given module specifier. */,
         "baseUrl": "." /* Specify the base directory to resolve non-relative module names. */,
         "paths": {
             "@/*": ["src/*"]
@@ -116,13 +116,13 @@
     },
     "include": ["src/**/*"],
     "files": [
-      "src/index.ts",
-      "src/pickers/Color/ColorPicker.tsx",
-      "src/pickers/Color/index.tsx",
-      "src/pickers/Date/DateButton.tsx",
-      "src/pickers/Date/DatePicker.tsx",
-      "src/pickers/Date/index.tsx",
-      "src/pickers/TimePick/index.tsx"
+        "src/index.ts",
+        "src/pickers/Color/ColorPicker.tsx",
+        "src/pickers/Color/index.tsx",
+        "src/pickers/Date/DateButton.tsx",
+        "src/pickers/Date/DatePicker.tsx",
+        "src/pickers/Date/index.tsx",
+        "src/pickers/TimePick/index.tsx"
     ],
     "exclude": ["node_modules", "dist"]
 }

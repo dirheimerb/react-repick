@@ -13,7 +13,7 @@ import {
     isWithinInterval,
 } from 'date-fns';
 
-interface DateRangePickerProps {
+export interface DateRangePickerProps {
     startDate: Date | null;
     endDate: Date | null;
     onChange: (startDate: Date | null, endDate: Date | null) => void;

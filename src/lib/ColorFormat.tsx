@@ -1,4 +1,3 @@
-import React, { useEffect } from 'react';
 export interface ColorFormatOptions {
     label?: string;
     selectedFormat: string;

@@ -1,7 +1,7 @@
-'use client';
-import React from 'react';
+// 'use client';
+// import React from 'react';
 import { useRef } from 'react';
-import useClickAwayListener from '../../lib/ClickAway.js';
+import useClickAwayListener from '../../lib/ClickAway';
 
 export interface DateButtonProps {
     show: boolean;

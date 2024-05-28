@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import clsx from 'clsx';
-import ColorWheel, { ColorType } from '../../lib/ColorWheel.js';
-import ColorButton from '../../lib/ColorButton.js';
-import { hexToRgb, toHex } from '../../lib/colorUtils.js';
+import ColorWheel, { ColorType } from '../../lib/ColorWheel';
+import ColorButton from '../../lib/ColorButton';
+import { hexToRgb, toHex } from '../../lib/colorUtils';
 
 export interface ColorPickerProps {
     color: string;
